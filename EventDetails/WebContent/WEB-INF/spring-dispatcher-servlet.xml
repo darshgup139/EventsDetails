@@ -16,7 +16,7 @@
 	<context:component-scan base-package="org.crce.interns.dao" />
 	<context:component-scan base-package="org.crce.interns.model" />
 	<context:component-scan base-package="org.crce.interns.service" />
-	<context:component-scan base-package="org.crce.interns.validator" />
+	<!-- <context:component-scan base-package="org.crce.interns.validator" /> -->
 
 	<mvc:annotation-driven />
 
@@ -58,8 +58,8 @@
 	</bean>
 
 
-	<bean id="addTPCValidator" class="org.crce.interns.validator.AddTPCValidator" />
-	<bean id="rvmTPCValidator" class="org.crce.interns.validator.RemoveTPCValidator" />
+	<!-- <bean id="addTPCValidator" class="org.crce.interns.validator.AddTPCValidator" />
+	<bean id="rvmTPCValidator" class="org.crce.interns.validator.RemoveTPCValidator" /> -->
 
 	<bean id="messageSource"
 		class="org.springframework.context.support.ReloadableResourceBundleMessageSource">

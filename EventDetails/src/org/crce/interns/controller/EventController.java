@@ -2,6 +2,7 @@ package org.crce.interns.controller;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -27,13 +28,17 @@ public class EventController {
 		return new ModelAndView("index");
 	}
 	
+	@RequestMapping("/InsertMonth")
+	public ModelAndView createUserWelcome(@ModelAttribute("command") Event_detailsBean edBean, BindingResult result) {
+		return new ModelAndView("insertMonth");
+	}
 	
 	@RequestMapping(value = "/SubmitMonth", method = RequestMethod.POST)
 	public ModelAndView createUser(@ModelAttribute("command") Event_detailsBean edBean, BindingResult bindingResult) {
 		//validator.validate(edBean, bindingResult);
 		if (bindingResult.hasErrors()) {
 			System.out.println("Binding Errors are present...");
-			return new ModelAndView("viewEvents");
+			return new ModelAndView("redirect:/ViewEvents");
 		}
 
 	//	eventService.viewEvents(edBean);
@@ -52,8 +57,15 @@ public class EventController {
 		return new ModelAndView("viewEvents", modelMap);
 	}
 	
+	@ModelAttribute("allMonths")
+    public Map<String,String> populateDepartments() 
+    {	
+		 Map<String,String> allmonths = new LinkedHashMap<String,String>();
+		 allmonths.put("Jan", "2016-01-01");
+       return allmonths;
+    }
 	
-	 /*@ModelAttribute("allMonths")
+	/* @ModelAttribute("allMonths")
 	    public List<Event_detailsBean> populateDepartments() 
 	    {
 	        ArrayList<Event_detailsBean> departments = new ArrayList<Event_detailsBean>();
@@ -63,7 +75,7 @@ public class EventController {
 	        departments.add(new Event_detailsBean(3,  "Information Technology"));
 	        return departments;
 	    }
-	 */
+	 
 	private void initModelList(Model model) {
 		
 		        List<String> monthList = new ArrayList<String>();
@@ -78,8 +90,8 @@ public class EventController {
 		
 		        monthList.add("May");
 		
-		       model.addAttribute("month", monthList);
+		       model.addAttribute("date", monthList);
 		
 		    }
-
+*/
 }

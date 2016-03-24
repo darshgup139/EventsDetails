@@ -21,11 +21,21 @@
 </style>
 </head>
 <body>
-<table border="1">
-		<tr>
-			<th>Input Month</th>
-			<td><a href="/EventDetails/InsertMonth">Click Here To Assign TPC and Task</a></td>
-		</tr>
+<h2>Spring's form select, option, options example</h2> 
+ <form:form method="POST" action="/EventDetails/SubmitMonth">
+		<form:errors path="*" cssClass="errorblock" element="div" />
+		<table>
+
+			<tr>
+				<td>Month :</td>
+				<td><form:select path="date">
+					  <form:option value="NONE" label="--- Select ---" />
+					  <form:options items="${allmonths}"/>
+				       </form:select>
+                                </td>
+				<td><form:errors path="date" cssClass="error" /></td>
+			</tr>
  	</table>
+	</form:form>
 </body>
 </html>

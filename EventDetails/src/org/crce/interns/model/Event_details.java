@@ -26,7 +26,7 @@ public class Event_details implements Serializable {
 	@Column(name = "approved")
 	private String approved;
 	
-	@Column(name = "date")
+	@Column(name = "dates")
 	private Date date;
 	
 	@Column(name = "venue")
