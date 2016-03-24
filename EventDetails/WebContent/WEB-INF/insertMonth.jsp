@@ -11,7 +11,7 @@
 <body>
 	<h2>Spring's form select, option, options example</h2>
 	<form:form method="POST" action="/EventDetails/SubmitMonth">
-		<form:errors path="*" cssClass="errorblock" element="div" />
+		
 		<table>
 
 			<tr>
