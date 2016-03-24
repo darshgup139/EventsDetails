@@ -16,7 +16,6 @@
 	<context:component-scan base-package="org.crce.interns.dao" />
 	<context:component-scan base-package="org.crce.interns.model" />
 	<context:component-scan base-package="org.crce.interns.service" />
-	<!-- <context:component-scan base-package="org.crce.interns.validator" /> -->
 
 	<mvc:annotation-driven />
 
@@ -58,9 +57,6 @@
 	</bean>
 
 
-	<!-- <bean id="addTPCValidator" class="org.crce.interns.validator.AddTPCValidator" />
-	<bean id="rvmTPCValidator" class="org.crce.interns.validator.RemoveTPCValidator" /> -->
-
 	<bean id="messageSource"
 		class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
 		<property name="basename" value="/WEB-INF/message_en" />
@@ -75,7 +71,3 @@
 
 </beans>
 
-<!-- <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource"> 
-	<property name="driverClassName" value="com.mysql.jdbc.Driver" /> <property 
-	name="url" value="jdbc:mysql://localhost:3306/interns" /> <property name="username" 
-	value="root" /> <property name="password" value="root" /> </bean> -->

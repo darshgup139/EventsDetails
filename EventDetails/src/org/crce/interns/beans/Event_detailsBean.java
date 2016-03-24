@@ -13,12 +13,6 @@ public class Event_detailsBean implements Serializable{
 	private String venue;
 	private String times;
 	
-	/*public Event_detailsBean(int id, String name) {
-		super();
-        this.id = id;
-        this.month = name;
-		// TODO Auto-generated constructor stub
-	}*/
 	public String getEvent_id() {
 		return event_id;
 	}

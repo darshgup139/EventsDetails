@@ -36,21 +36,14 @@ public class EventController {
 	
 	@RequestMapping(value = "/SubmitMonth", method = RequestMethod.POST)
 	public ModelAndView createUser(@RequestParam("month") Integer month, BindingResult bindingResult) {
-		//validator.validate(edBean, bindingResult);
-		//if (bindingResult.hasErrors()) {
-			//System.out.println("Binding Errors are present...");
-			//return new ModelAndView("redirect:/ViewEvents");
-	//	}
-		// get n stored month in month variable
+	
+		if (bindingResult.hasErrors()) {
+			System.out.println("Binding Errors are present...");
+			return new ModelAndView("redirect:/ViewEvents");
+		}
+ 	// get n stored month in month variable
 		
-		System.out.println(month);
-
-	//	eventService.viewEvents(edBean);
-		//Event_detailsBean fedBean= new Event_detailsBean();
-	//	fedBean.setUsername(edBean.getUsername());
-	/*	System.out.println(edBean.getUserName()+" in Contoller");
-		System.out.println(edBean.getUserRole()+" in Contoller");*/
-		
+		System.out.println(month);		
 		return new ModelAndView("redirect:/ViewEvents");
 	}
 	
