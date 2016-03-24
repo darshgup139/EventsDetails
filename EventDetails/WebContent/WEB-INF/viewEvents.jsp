@@ -9,33 +9,32 @@
 <title>View Events</title>
 </head>
 <body>
-	<%-- <c:if test="${!empty events}"> --%>
-		<c:if test="${!empty events}">
-			<table border="1">
+	<c:if test="${!empty events}">
+		<table border="1">
+			<tr>
+				<th>Event Id</th>
+				<th>Event type</th>
+				<th>Company Id</th>
+				<th>Approved</th>
+				<th>Date</th>
+				<th>Venue</th>
+				<th>Time</th>
+			</tr>
+			<c:forEach items="${events}" var="ed">
 				<tr>
-					<th>Event Id</th>
-					<th>Event type</th>
-					<th>Company Id</th>
-					<th>Approved</th>
-					<th>Date</th>
-					<th>Venue</th>
-					<th>Time</th>
+					<td><c:out value="${ed.event_id}" /></td>
+					<td><c:out value="${ed.event_type}" /></td>
+					<td><c:out value="${ed.company_id}" /></td>
+					<td><c:out value="${ed.approved}" /></td>
+					<td><c:out value="${ed.date}" /></td>
+					<td><c:out value="${ed.venue}" /></td>
+					<td><c:out value="${ed.times}" /></td>
 				</tr>
-				<c:forEach items="${events}" var="ed">
-					<tr>
-						<td><c:out value="${ed.event_id}" /></td>
-						<td><c:out value="${ed.event_type}" /></td>
-						<td><c:out value="${ed.company_id}" /></td>
-						<td><c:out value="${ed.approved}" /></td>
-						<td><c:out value="${ed.date}" /></td>
-						<td><c:out value="${ed.venue}" /></td>
-						<td><c:out value="${ed.times}" /></td>
-					</tr>
-				</c:forEach>
-			</table>
-		</c:if>
-		<tr>
-			<td><a href="/EventDetails">Home</a></td>
-		</tr>
+			</c:forEach>
+		</table>
+	</c:if>
+	<tr>
+		<td><a href="/EventDetails">Home</a></td>
+	</tr>
 </body>
 </html>

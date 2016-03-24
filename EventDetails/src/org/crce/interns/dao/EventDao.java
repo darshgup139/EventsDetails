@@ -7,6 +7,6 @@ import org.crce.interns.model.Event_details;
 
 public interface EventDao {
 
-	List<Event_details> viewEvents(String month);
+	List<Event_details> viewEvents(Integer month);
 
 }

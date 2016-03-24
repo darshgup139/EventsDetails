@@ -9,18 +9,13 @@
 
 </head>
 <body>
-	<h2>Spring's form select, option, options example</h2>
+	<h2>Select the month to events in that Month</h2>
 	<form:form method="POST" action="/EventDetails/SubmitMonth">
 		<table>
 
 			<tr>
 				<td>Month :</td>
-				<td>
-					<!--<form:select path="date">
-					  <form:option value="NONE" label="--- Select ---" />
-					  <form:options items="${allmonths}"/>
-				</form:select>
-				--> <!-- For now try this --> <select name="month">
+				<td><select name="month">
 
 						<option value="01">January</option>
 						<option value="02">February</option>
@@ -35,9 +30,7 @@
 						<option value="11">November</option>
 						<option value="12">December</option>
 
-				</select>
-
-				</td>
+				</select></td>
 			</tr>
 			<tr>
 				<td colspan="2"><input type="submit" value="Submit" /></td>
