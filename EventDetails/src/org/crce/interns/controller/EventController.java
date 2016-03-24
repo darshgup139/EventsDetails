@@ -30,7 +30,7 @@ public class EventController {
 	}
 	
 	@RequestMapping("/InsertMonth")
-	public ModelAndView createUserWelcome(@ModelAttribute("command") Event_detailsBean edBean, BindingResult result) {
+	public ModelAndView createUserWelcome(@ModelAttribute("command") Event_detailsBean edBean) {
 		return new ModelAndView("insertMonth");
 	}
 	
