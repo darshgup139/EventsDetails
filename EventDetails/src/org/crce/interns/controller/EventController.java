@@ -50,7 +50,7 @@ public class EventController {
 	@RequestMapping("/ViewEvents")
 	public ModelAndView viewEvents() {
 		Map<String, Object> modelMap = new HashMap<String, Object>();
-		modelMap.put("users", eventService.viewEvents());
+		modelMap.put("events", eventService.viewEvents());
 		return new ModelAndView("viewEvents", modelMap);
 	}
 	

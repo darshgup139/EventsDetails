@@ -7,17 +7,22 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<c:if test="${!empty users}">
+	<c:if test="${!empty events}">
 
 		<table border="1">
 			<tr>
 				<th>User Name</th>
 				<th>User Role</th>
 			</tr>
-			<c:forEach items="${users}" var="user">
+			<c:forEach items="${events}" var="ed">
 				<tr>
-					<td><c:out value="${user.username}" /></td>
-					<td><c:out value="${user.role_id}" /></td>
+					<td><c:out value="${ed.event_id}" /></td>
+					<td><c:out value="${ed.event_type}" /></td>
+					<td><c:out value="${ed.company_id}" /></td>
+					<td><c:out value="${ed.approved}" /></td>
+					<td><c:out value="${ed.date}" /></td>
+					<td><c:out value="${ed.venue}" /></td>
+					<td><c:out value="${ed.times}" /></td>
 				</tr>
 			</c:forEach>
 		</table>

@@ -20,8 +20,9 @@ public class EventDaoImpl implements EventDao {
 	@Override
 	public List<Event_details> viewEvents(Date startDate, Date endDate) {
 		// TODO Auto-generated method stub
-		List<Event_details> allEvents=entityManager.createQuery("SELECT e FROM Events ed WHERE ed.date BETWEEN :startDate AND :endDate", Event_details.class).setParameter("startDate",startDate).setParameter("endDate",endDate).getResultList();
-		return allEvents;
+		/*List<Event_details> allEvents=entityManager.createQuery("SELECT ed FROM Events ed WHERE ed.date BETWEEN :startDate AND :endDate", Event_details.class).setParameter("startDate",startDate).setParameter("endDate",endDate).getResultList();
+		return allEvents;*/
+		return entityManager.createQuery("select ed from Event_details ed", Event_details.class).getResultList();
 	}
 
 }
