@@ -28,10 +28,23 @@
 
 			<tr>
 				<td>Month :</td>
-				<td><form:select path="date">
+				<td>
+				<!--<form:select path="date">
 					  <form:option value="NONE" label="--- Select ---" />
 					  <form:options items="${allmonths}"/>
-				       </form:select>
+				</form:select>
+				-->
+				
+				<!-- For now try this -->
+				
+				<select name="month">
+				
+					<option value="1">January</option>
+					<option value="2">February</option>
+					<option value="3">March</option>
+				
+				</select>
+				
                                 </td>
 				<td><form:errors path="date" cssClass="error" /></td>
 			</tr>
