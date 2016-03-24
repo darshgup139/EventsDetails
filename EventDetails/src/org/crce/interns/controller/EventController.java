@@ -35,12 +35,9 @@ public class EventController {
 	}
 	
 	@RequestMapping(value = "/SubmitMonth", method = RequestMethod.POST)
-	public ModelAndView createUser(@RequestParam("month") Integer month, BindingResult bindingResult) {
-	
-		if (bindingResult.hasErrors()) {
-			System.out.println("Binding Errors are present...");
-			return new ModelAndView("redirect:/ViewEvents");
-		}
+	public ModelAndView createUser(@RequestParam("month") Integer month) {
+		
+		
  	// get n stored month in month variable
 		
 		System.out.println(month);		
