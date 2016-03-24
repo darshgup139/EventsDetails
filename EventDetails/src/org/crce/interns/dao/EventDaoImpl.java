@@ -1,5 +1,6 @@
 package org.crce.interns.dao;
 
+import java.sql.Date;
 import java.util.List;
 
 import javax.persistence.EntityManager;
@@ -17,9 +18,10 @@ public class EventDaoImpl implements EventDao {
 	private EntityManager entityManager;
 	
 	@Override
-	public List<Event_details> viewUsers() {
+	public List<Event_details> viewEvents(Date startDate, Date endDate) {
 		// TODO Auto-generated method stub
-		return entityManager.createQuery("select ed from Event_details ed", Event_details.class).getResultList();
+		List<Event_details> allEvents=entityManager.createQuery("SELECT e FROM Events ed WHERE ed.date BETWEEN :startDate AND :endDate", Event_details.class).setParameter("startDate",startDate).setParameter("endDate",endDate).getResultList();
+		return allEvents;
 	}
 
 }

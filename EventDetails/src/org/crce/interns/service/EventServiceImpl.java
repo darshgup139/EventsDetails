@@ -31,7 +31,10 @@ public class EventServiceImpl implements EventService{
 	@Override
 	public List<Event_detailsBean> viewEvents() {
 		// TODO Auto-generated method stub
-		List<Event_details> eventList = eventDao.viewUsers();
-		return convertToBean(eventList);
+	return null;	
 	}
+	/*
+		//List<Event_details> eventList = eventDao.viewEvents(2011-02-01,2011-02-01);
+		return convertToBean(eventList);
+	}*/
 }

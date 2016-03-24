@@ -28,8 +28,8 @@
 
 			<tr>
 				<td>Month :</td>
-				<td><form:select path="date">
-					  <form:option value="NONE" label="--- Select ---" />
+				<td><form:select path="date" multiple="true">
+					  <%-- <form:option value="NONE" label="--- Select ---" /> --%>
 					  <form:options items="${allmonths}"/>
 				       </form:select>
                                 </td>
