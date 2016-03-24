@@ -36,8 +36,9 @@ public class EventController {
 	
 	@RequestMapping(value = "/SubmitMonth", method = RequestMethod.POST)
 	public ModelAndView createUser(@RequestParam("month") Integer month, BindingResult bindingResult) {
-		//validator.validate(edBean, bindingResult);
-		//if (bindingResult.hasErrors()) {
+		validator.validate(month, bindingResult);
+		
+		if (bindingResult.hasErrors()) {
 			//System.out.println("Binding Errors are present...");
 			//return new ModelAndView("redirect:/ViewEvents");
 	//	}
