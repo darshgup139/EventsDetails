@@ -27,12 +27,12 @@ public class Event_details implements Serializable {
 	private String approved;
 	
 	@Column(name = "dates")
-	private Date date;
+	private Date dates;
 	
 	@Column(name = "venue")
 	private String venue;
 	
-	@Column(name = "'time'")
+	@Column(name = "times")
 	private String times;
 	
 	public String getEvent_id() {
@@ -60,10 +60,10 @@ public class Event_details implements Serializable {
 		this.approved = approved;
 	}
 	public Date getDate() {
-		return date;
+		return dates;
 	}
-	public void setDate(Date date) {
-		this.date = date;
+	public void setDate(Date dates) {
+		this.dates = dates;
 	}
 	public String getVenue() {
 		return venue;

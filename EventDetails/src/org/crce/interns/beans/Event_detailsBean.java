@@ -9,7 +9,7 @@ public class Event_detailsBean implements Serializable{
 	private String event_type;
 	private int company_id;
 	private String approved;
-	private Date date;
+	private Date dates;
 	private String venue;
 	private String times;
 	
@@ -38,10 +38,10 @@ public class Event_detailsBean implements Serializable{
 		this.approved = approved;
 	}
 	public Date getDate() {
-		return date;
+		return dates;
 	}
-	public void setDate(Date date) {
-		this.date = date;
+	public void setDate(Date dates) {
+		this.dates = dates;
 	}
 	public String getVenue() {
 		return venue;
