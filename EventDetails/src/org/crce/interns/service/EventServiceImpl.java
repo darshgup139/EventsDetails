@@ -10,8 +10,9 @@ import org.crce.interns.model.Event_details;
 
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
-
+@Service
 public class EventServiceImpl implements EventService{
 
 	@Autowired

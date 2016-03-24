@@ -47,6 +47,9 @@
                                 </td>
 				<td><form:errors path="date" cssClass="error" /></td>
 			</tr>
+			<tr>
+				<td colspan="2"><input type="submit" value="Submit" /></td>
+			</tr>
  	</table>
 	</form:form>
 </body>
