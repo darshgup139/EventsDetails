@@ -30,17 +30,14 @@ public class EventController {
 	}
 	
 	@RequestMapping("/InsertMonth")
-	public ModelAndView createUserWelcome(@ModelAttribute("command") Event_detailsBean edBean, BindingResult result) {
+	public ModelAndView createUserWelcome(@ModelAttribute("command") Event_detailsBean edBean) {
 		return new ModelAndView("insertMonth");
 	}
 	
 	@RequestMapping(value = "/SubmitMonth", method = RequestMethod.POST)
-	public ModelAndView createUser(@RequestParam("month") Integer month, BindingResult bindingResult) {
-	
-		if (bindingResult.hasErrors()) {
-			System.out.println("Binding Errors are present...");
-			return new ModelAndView("redirect:/ViewEvents");
-		}
+	public ModelAndView createUser(@RequestParam("month") Integer month) {
+		
+		
  	// get n stored month in month variable
 		
 		System.out.println(month);		
