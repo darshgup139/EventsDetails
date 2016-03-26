@@ -20,7 +20,7 @@ public class EventDaoImpl implements EventDao {
 	@Override
 	public List<Event_details> viewEvents(Integer months) {
 		System.out.println("Month in Dao Impl :" + months);
-		List<Event_details> allEvents = entityManager.createQuery("select ed from Event_details ed " + " where EXTRACT(MONTH from ed.dates)= :m").setParameter("m", months).getResultList();
+		List<Event_details> allEvents = entityManager.createQuery("select ed from Event_details ed " + " where EXTRACT(MONTH from ed.dates)= :m" + " order by ed.dates").setParameter("m", months).getResultList();
 		if (allEvents.isEmpty()) {
 			System.out.println("Error null query");
 		}
